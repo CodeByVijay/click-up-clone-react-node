@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invite Member</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    body {
+      /* Full height */
+      height: 100%;
+      background-color: #dcfce7;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .container {
+      padding: 165px;
+    }
+    .container h2 {
+      margin-bottom: 15px;
+      border-bottom: 2px double #000000;
+      width: fit-content;
+    }
+    .container .text {
+      font-family: "Courier New", Courier, monospace;
+      font-style: oblique;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 10px;
+    }
+    .container button {
+      background-color: #16a34a;
+      outline: none;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 20px;
+      font-size: 18px;
+      transform: 1.5s;
+    }
+    .container button:hover {
+      background-color: #15803d;
+      outline: none;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 25px;
+    }
+
+    @media screen and (max-width: 480px) {
+      .container {
+        padding: 50px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .container {
+        padding: 100px;
+      }
+    }
+    @media screen and (max-width: 1268px) {
+      .container {
+        padding: 140px;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <center>
+        <h2>Project Invitation</h2>
+        <div class="text">
+          Dear, "<b>Test User</b>". You have get invitation. <br />
+          Please join "<b>Test Project</b>". Click below button.
+        </div>
+        <a href="#" target="_blank"><button>Join Project</button></a>
+      </center>
+    </div>
+  </body>
+</html>
