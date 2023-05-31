@@ -1,0 +1,11 @@
+@tailwind base;
+@layer base {
+  html {
+    @apply text-gray-800;
+  } 
+}
+.taskListBlock::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+@tailwind components;
+@tailwind utilities;
