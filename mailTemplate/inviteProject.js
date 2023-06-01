@@ -1,7 +1,7 @@
 import { mailTransporter } from "../mailSetting.js";
 
 export const inviteProject = (data) => {
-  const { project_name, member_name,inviteLink } = data;
+  const { project_name, member_name,inviteLink,userMail } = data;
 
   const html = `<!DOCTYPE html>
   <html lang="en" style="margin: 0;padding: 0;">
@@ -27,7 +27,7 @@ export const inviteProject = (data) => {
 
   let mailDetails = {
     from: "vijay.amule@techinfini.com",
-    to: "vijay.amule@techinfini.com",
+    to: userMail,
     subject: `Dear! ${member_name} invitation ${project_name}.`,
     html: html,
   };

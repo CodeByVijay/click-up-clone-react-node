@@ -119,6 +119,7 @@ export const inviteMember = (req, res) => {
       member_id: val.value,
     };
 
+    const member_id= val.value
     // base64Encode
     const tokenutf8 = Buffer.from(JSON.stringify(tokenData), "utf8");
     let base64Token = tokenutf8.toString("base64");
@@ -132,12 +133,19 @@ export const inviteMember = (req, res) => {
       (err, resp) => {
         if (err) throw err;
         const member_name = val.label;
-        const inviteData = {
-          project_name,
-          member_name,
-          inviteLink,
-        };
-        inviteProject(inviteData);
+        const selMail = "SELECT email FROM `users` WHERE `id`=?"
+        db_conn.query(selMail,[member_id],(err,resp)=>{
+          if (err) throw err;
+
+          const userMail = resp[0].email
+          const inviteData = {
+            project_name,
+            member_name,
+            inviteLink,
+            userMail
+          };
+          inviteProject(inviteData);
+        })
       }
     );
   });
